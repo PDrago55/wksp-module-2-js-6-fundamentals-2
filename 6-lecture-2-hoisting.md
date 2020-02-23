@@ -39,7 +39,11 @@ const anotherGreeting = 'Good evening';
 
 // a. 'Good evening'
 // b. undefined
-// c. ReferenceError: can't access lexical declaration `anotherGreeting' before initialization
+// c. ReferenceError: can't access lexical declaration `anotherGreeting' before initialization 
+
+// answer C. because the variable gets logged, before it is even declared.. it doesn't even exist. the difference between the first and second problem is that, in the first one, the statement knows var greeting exists, but does not have an assigned value thus undefined.
+
+
 ```
 
 ---
@@ -52,7 +56,11 @@ let yetAnotherGreeting = 'Goodnight';
 // a. 'Good evening'
 // b. undefined
 // c. ReferenceError: can't access lexical declaration `anotherGreeting' before initialization
+
+//answer c, for same reason as above. 
+
 ```
+
 
 ---
 

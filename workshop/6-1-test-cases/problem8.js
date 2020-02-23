@@ -13,11 +13,23 @@ let verifyEquals = require('../../assets/verify-equals');
 
 function f(str) {
 
+
+    let back = '';
+    for (let i = str.length; i >= 0; i--){
+    back += str.charAt(i);
+    }
+    return back;
 }
 
+
+
+
+
+
+
 // We need 5 test cases.
-let inputs = [];
-let outputs = [];
+let inputs = [['hello'], ['hi'], ['ciao'], ['bounjour'], ['fuck off']];
+let outputs = ['olleh', 'ih', 'oaic', 'ruojnuonb', 'off kcuf'];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.
@@ -25,6 +37,7 @@ function runTest(i) {
     if (i >= inputs.length) throw new Error('You do not have enough test cases');
     let expected = outputs[i];
     let actual = f(inputs[i]);
+    console.log(actual, expected)
     verifyEquals(expected, actual);
 }
 

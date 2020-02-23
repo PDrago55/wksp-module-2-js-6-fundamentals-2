@@ -18,7 +18,23 @@ is a variable in function, or method, definition.
 
 ```js
 // Example
+ function greeting(names){
+     names.forEach(function(name){
+         console.log (`${name}! Want some Bacon?`)
+     });
+ }
+greeting(['daniel', 'james', 'sara']);
 
+
+// Example with.maps
+
+ function greeting(names){
+    const x = names.map(function(name){
+         return `${name}! Want some Bacon?`
+         return x;
+     });
+ }
+console.log(greeting(['daniel', 'james', 'sara']));
 ```
 
 ---
@@ -90,9 +106,11 @@ This will _define_ a function expression.
 The third way is an arrow function
 
 ```js
-someFunc = () => {
+someFunc = (num1, num2) => {
     // do something...
 }
+
+names.forEach((name) => console.log(name));
 ```
 
 This is equivalent to the previous way of _defining_ a function. 

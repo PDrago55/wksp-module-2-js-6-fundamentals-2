@@ -13,15 +13,24 @@ let verifyEquals = require('../../assets/verify-equals');
 // f(["foo", -1]) // ""
 
 function f(arr) {
-    
-}
+    let idk = arr[0];
+    let bruh = arr[1];
 
+    if (bruh <= 0) return '';
+
+    if (typeof idk !== 'string' || typeof bruh !== 'number') return undefined;
+    let plise = '';
+    for (i = 0; i < bruh; i++){ 
+        plise = plise + idk
+    }
+    return plise;
+}
 // Step 2
 // We need 7 test cases.
 // Don't forget to test all of the question parameters
 
-let inputs = [];
-let outputs = [];
+let inputs = [['lol', 1], ['trust', 2], ['eh', 3], ['huh', 2], ['fuck', 2], ['lol', -1], ['niyeah', 2]];
+let outputs = ['lol', 'trusttrust', 'eheheh', 'huhhuh', 'fuckfuck', '', 'niyeahniyeah'];
 
 // Step 3
 // Run this file in the debugger.
@@ -33,6 +42,7 @@ function runTest(i) {
     if (i >= inputs.length) throw new Error('You do not have enough test cases');
     let expected = outputs[i];
     let actual = f(inputs[i]);
+    console.log(actual, expected);
     verifyEquals(expected, actual);
 }
 

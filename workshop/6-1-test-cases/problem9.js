@@ -12,13 +12,29 @@ let verifyEquals = require('../../assets/verify-equals');
 //    - You'll need to use the split string method
 //    - A for loop might be helpful
 
-function f(str) {
 
+function f(str) {
+    const words = str.split();
+    let longest = '';
+
+    for (let i = 0; i < words.length; i++) {
+        if (longest.length <= words[i].length) longest = words[i];
+    }
+    return longest;
 }
 
+// max.map is not a function...
+// function f(str) {
+// let max = str[0].length;
+// max.map(v => max = Math.max(max, v.length));
+// let result = str.filter(v => v.length == max);
+// return result;
+// }
+
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = [['go fuck yourself'], ["this is really"], ["hard to understand"], ["I feel hopeless"], ['plise help']];
+let outputs = ['yourself', "really", "understand", "hopeless", 'plise'];
+
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.
